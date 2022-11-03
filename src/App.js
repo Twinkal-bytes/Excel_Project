@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import ExportExcelToJson from './components/ExcelExportToJson';
 
 function App() {
+  const excelExportData =[
+    
+      {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+  
+    },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <h1 style={{marginTop :'20%'}}>Export To Excel</h1>
+    <ExportExcelToJson excelData={excelExportData} fileName={"Export Excel"}/>
+   </div>
+    
   );
 }
 
